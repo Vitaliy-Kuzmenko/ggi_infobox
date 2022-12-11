@@ -67,11 +67,11 @@ function movesnow() {
 }
 
 for (i = 0; i <= snowmax; i++) {
-    const div = document.createElement("span");
-    div.innerHTML = snowletter;
-    div.id = "s"+i
-    div.style = "position:absolute;top:-" + snowmaxsize + "px;" + snowletter
-    document.body.appendChild(div);
+    const greateSpan = document.createElement("span");
+    greateSpan.innerHTML = snowletter;
+    greateSpan.id = "s"+i
+    greateSpan.style = "position:absolute;top:-" + snowmaxsize + "px;" + snowletter
+    document.body.appendChild(greateSpan);
 }
 
 document.addEventListener(document,initsnow());//почитать
