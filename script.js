@@ -1,3 +1,31 @@
+//Вывод времени
+const dateTime = document.getElementById('data_time');
+
+const currenTime = () => {
+  dateTime.innerHTML = new Date().toLocaleString()
+};
+
+const printDate = setInterval(currenTime, 1000);
+//End Вывод времени
+
+
+//расписание
+let select = document.getElementById("select");
+
+let block = document.querySelectorAll(".block");
+
+let lastIndex = 0;
+
+block[0].style.display = "block";
+
+select.addEventListener("change", function () {
+  block[lastIndex].style.display = "none";
+  let index = select.selectedIndex;
+  block[index].style.display = "block";
+  lastIndex = index;
+});
+//end расписание
+
 let snowmax = 35;
 let snowcolor = [
   "#AAAACC",
